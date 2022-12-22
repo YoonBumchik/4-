@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+let arr =
+[[14, 65, 3],
+[15, 2, 88],
+[1, 44, 25]];
+for(let a = 0; a < arr.length; a++){
+for(let b = 0; b < arr.length; b++){
+if (arr[b] > arr[b+1]){
+let temp = arr[0][b]
+arr[0][b] = arr[0][b+1]
+arr[0][b+1] = temp
+}
+}
+}
+for(let c = 0; c < 3; c++) {
+console.log(arr[c])
+}
+let t = {};
+for (let i = 0; i < arr.length; i++)
+t[arr[i]] = (t[arr[i]] + 1) || 1;
+console.log(t);
+let i=0;
+while (i<10 ) {console.log(i); i+=1;}
+</script>
+</body>
+</html>
